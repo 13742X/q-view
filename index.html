@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="tit"></title>
+    <!-- dont uses style min as aggressively removes webkit -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link id="display" rel="stylesheet" href="" />
+    <link id="theme" rel="stylesheet" href="" />
+    <link id="stylesheet" rel="stylesheet" href="./css/dark-mode.min.css" disabled aria-disabled="">
+  </head>
+  <body id="body" class="background-color-one font-color-two">
+    <div id="loader"></div>
+    <div class="search-box">
+    <input class="search-input" type="text" id="searchTerm" placeholder="Enter search term">
+  </div>
+    <div id="content">
+  <div class="global">
+    <div id="#container" class="grid-container">
+      <div class="item1">
+        <div id="topbanner" class="hdr"></div>
+        <div class="flexy other-icon-bar background-color-three">
+          <div id="burgerking" class="burger">
+              <a id="burger"><img class="icon-svg" src="./images/burger.svg" /></a>
+              <div class="burger-text icon-text-color tac">menu</div>
+          </div>
+          <div id="namer" class="namer"></div>
+          <div class="internet-offline" id="internet-status"></div>
+          <div class="logo refresh icon-svg" id="logo"></div>
+        </div>
+    <div class="flexy icon-bar background-color-three">
+      <div class="dropdown">
+        <span class="dropdown-title">Links</span>
+        <div class="dropdown-content dropdown-title background-color-one" id="links-dropdown">
+      </div>
+        </div>
+    <div id="iconpad" class="iconpad tac">
+    </div>
+    <div id="the-options" class="settings-only refresh tac">
+      <a href="options.html" target="_blank"><img class="icon-svg" src="./images/options.svg" /></a>
+      <div class="icon-text icon-text-color">options</div>
+    </div>
+    <div  id="the-sandbox" class="settings-only refresh tac">
+      <a target="_blank" href="sandbox.html"><img class="icon-svg" src="./images/sandbox.svg" /></a>
+      <div class="icon-text icon-text-color">sandbox</div>
+    </div>
+    <div id="refresher" class="settings-only refresh tac">
+      <a id ="reload"><img class="icon-svg" src="./images/reload.svg" /></a>
+      <div class="icon-text icon-text-color">reload</div>
+    </div>
+    <div id="help" class="help tac">
+      <a id ="helpy"><img class="icon-svg" src="./images/help.svg" /></a>
+      <div class="icon-text icon-text-color">help</div>
+    </div>
+    <div id="expand" class="expand tac">
+      <a id ="expando" target="blank" href="index.html"><img class="icon-svg" src="./images/expand.svg" /></a>
+      <div class="icon-text icon-text-color">expand</div>
+    </div>
+    <div id="dots" class="settings tac">
+      <a id="settings"><img class="icon-svg" src="./images/settings.svg" /></a>
+      <div class="icon-text icon-text-color">settings</div>
+    </div>
+    </div>
+        </div>
+      <div class="item2 background-color-three">
+        <div id="setting-items" class="items setting-items hide">
+        <div id="settings-container" class="settingscontainer">
+            <a href="#import-new-files-header" class="menu-item font-color-two linkd">Import</a>
+            <a href="#this-header" class="menu-item font-color-two linkd">This</a>
+            <a href="#packages-header" class="menu-item font-color-two linkd">Packages</a>
+            <a href="#cloud-files-header" class="menu-item font-color-two linkd">Cloud Files</a>
+            <a href="#editor-header" class="menu-item font-color-two linkd">Editor</a>
+        </div>
+        </div>
+        <div id="items" class="items"></div>
+      </div>
+      <div id="thetext" class="item3">
+        <div class="cl2 hide setlist" id="thesettings">
+          <f id="import-new-files-header"></f>
+        <div id="thebody" class="content right col2">
+          <div id="splash" class="splasher">
+          </div>
+            <h1 class="head font-color-two">Settings</h1>
+            <input type="checkbox" id="darkModeToggle">
+<label for="darkModeToggle" class="toggle-label">Dark mode</label>
+            <h2>Import new files</h2>
+            <div class="flexy h50">
+              <div class="heado">Public Key</div>
+              <div class="inputo">
+                <input
+                  id="imp1"
+                  name="imp1"
+                  minlength="3"
+                  placeholder=""
+                  type="text"
+                />
+              </div>
+              <span class="import-mess font-color-two" id="create-message"></span>
+            </div>
+            <div class="flexy h50">
+              <div class="heado"></div>
+              <div class="butto">
+                <div class="mybutton background-color-two font-color-one" id="importlink">IMPORT</div>
+              </div>
+            </div>
+            <f id="credentials-header"></f>
+<h2>Credentials</h2>
+<div class="flexy h50">
+  <div class="heado">Private key</div>
+  <div class="inputo">
+    <input id="i5" name="i5" minlength="10" type="password" autocomplete="current-password" placeholder="" />
+    <span class="eye-container">
+      <div id="e1" class="eye"></div>
+    </span>
+  </div>
+</div>
+<f id="this-header"></f>
+<div class="flexy h50">
+  <div class="heado">API Key</div>
+  <div class="inputo">
+    <input id="i4" minlength="10" type="text" placeholder="" />
+  </div>
+</div>
+<h2>This</h2>
+            <div class="flexy h50">
+              <div class="heado">Markdown File</div>
+              <div class="inputo">
+                <input
+                  id="i1"
+                  class=""
+                  required
+                  minlength="3"
+                  placeholder="Enter like url/markdown.md ..."
+                  type="text"
+                  accept="text/*"
+                />
+              </div>
+            </div>
+            <div class="flexy h50">
+              <div class="heado">Menu File</div>
+              <div class="inputo">
+                <input
+                  required
+                  class=""
+                  minlength="3"
+                  id="i2"
+                  placeholder="Enter like url/menus.csv ..."
+                  type="text"
+                  accept="text/*"
+                />
+              </div>
+            </div>
+            <div class="flexy h50">
+              <div class="heado">Stylesheet File</div>
+              <div class="inputo">
+                <input
+                  required
+                  minlength="3"
+                  id="ss"
+                  name="ss"
+                  placeholder="Select preloaded or enter url/stylesheet"
+                  type="text"
+                />
+              </div>
+            </div>
+            <div class="flexy h50">
+              <div class="heado"></div>
+              <div class="inputo">
+                <div id="dropdown-css" tabindex="0">
+                  <div class="item-css">default.css</div>
+                  <div class="item-css">modern.css</div>
+                  <div class="item-css">corporate.css</div>
+                  <div class="item-css">retro.css</div>
+                </div>
+              </div>
+            </div>
+            <div class="flexy h50">
+              <div class="heado">Logo URL</div>
+              <div class="inputo">
+                <input id="i6" minlength="2" type="text" placeholder="" />
+              </div>
+            </div>
+            <!-- <div class="flexy h50">
+              <div class="heado">Last Updated</div>
+              <div class="inputo">
+                <input class="grey-day" id="i3" readonly type="text" /></div>
+            </div> -->
+            <f id="packages-header"></f>
+            <div class="flexy h50">
+              <div class="heado">Tag</div>
+              <div class="inputo">
+                <input
+                class="grey-day"
+                  id="pname"
+                  readonly
+                  aria-readonly=""
+                  type="text"
+                />
+              </div>
+            </div>
+            <h2>Packages</h2>
+            <!-- this has no height limit -->
+            <div class="flexy">
+              <div class="heado">Tags</div>
+              <div class="hist">
+                <div id="tag-container" class="tag-container"></div>
+              </div>
+            </div>
+            <div class="flexy h50">
+              <div class="heado">Tag name</div>
+              <div class="inputo">
+                <input id="i7" minlength="2" maxlength="30" type="text" placeholder="." />
+              </div>
+            </div>
+            <div class="flexy h50">
+              <div class="heado"></div>
+              <div class="butto">
+                <div class="mybutton background-color-two font-color-one" id="createlink">CREATE</div>
+              </div>
+              <div>
+                <span class="copy-mess font-color-two" id="the-create-message"></span>
+              </div>
+            </div>
+            <div class="flexy h50">
+              <div class="heado">Public Key</div>
+              <div class="inputo">
+                <input
+                  id="pkey"
+                  readonly
+                  aria-readonly=""
+                  type="text"
+                />
+              </div>
+            </div>
+            <div class="flexy h50">
+              <div class="heado"></div>
+              <div class="butto">
+                <div class="mybutton background-color-two font-color-one" id="copyButton">COPY</div>
+              </div>
+              <div>
+                <span class="hide copy-mess font-color-two font-color-one" id="copy-message">Copied!</span>
+              </div>
+            </div>
+<h2>Local Files</h2>
+        <f id="cloud-files-header"></f>
+          <div class="fileviewcontainer">
+          <ul id="myDetails"></ul>
+          <div class="heado" id="output"></div>
+          </div>
+          <h2>Cloud Files</h2>
+          <f id="editor-header"></f>
+          <div class="fileviewcontainer">
+          <div id="cloud-list"></div>
+          <div class="copy-mess">Cloud items cannot be deleted here and must be deleted at the Cloud. Stay safe and only upload encrypted files.</div>
+          </div>
+          <editor id="editor-area">
+            <h2>Editor</h2>
+            <div class="fileviewcontainer">
+              <div class="">
+                <input type="file" accept=".md,.txt,.csv,.json,.smm,.css" id="fileInput" />
+              </div>
+              <div class-"xsavers">
+                <div class="flexy">
+              <label class="background-color-two font-color-one" for="fileInput" id="filelabel">EDIT</label>
+              <div id="button-padding" class="nice-box"></div>
+              <div class="mybutton background-color-two font-color-one" id="file-new">NEW</div>
+
+
+
+              </div>
+
+              <div id="savecontainer" class="hide">
+
+
+                <div class="flexy h50">
+                  <div class="heado">File Name</div>
+                  <div class="inputo">
+                    <input id="fileName" name="fileName" minlength="5" type="text" placeholder="e.g example.md" />
+                  </div>
+                  <div id="editor-refresh" class="editor-refresh"><image id="editor-reload" src="./images/reload.svg" /></div>
+                </div>
+
+
+                <div class="mybutton background-color-two font-color-one" id="downwego">SAVE AS</div>
+                <div class="pgeneral"></div>
+
+                <input type="checkbox" id="encryptme" name="encryptme">
+                <label for="encryptme" class="toggle-label">Encrypt file with password?</label>
+
+                <div></div>
+
+                <input type="checkbox" id="cloudme" name="cloudme">
+                <label for="cloudme" class="toggle-label">Cloud?</label>
+
+                <div></div>
+
+                <input type="checkbox" id="localme" name="localme">
+                <label for="localme" class="toggle-label">Save to local?</label>
+
+                <div></div>
+
+
+
+
+
+
+              </div>
+              <div id="new-pwd-container" class="inputo hide">
+                <input id="new-pwd" autocomplete="current-password" name="i5" minlength="10" type="password" placeholder="" />
+                <span class="eye-container">
+                  <div id="e2" class="eye"></div>
+                </span>
+              </div>
+              <div id="cloud-container" class="hide">
+                <h3>Cloud parameters</h3>
+             <div class="flexy">
+              <div class="heado">
+              <label for="cloud-1-input">Cloud name</label>
+            </div>
+              <div id="cloud-1" class="inputo">
+                <input id="cloud-1-input" name="cloud-1-input" minlength="5" type="text" placeholder="" />
+              </div>
+            </div>
+            <div class="flexy">
+              <div class="heado">
+              <label for="cloud-2-input">Cloud Folder</label>
+            </div>
+              <div id="cloud-2" class="inputo">
+                <input id="cloud-2-input" name="cloud-2-input" minlength="5" type="text" placeholder="" />
+              </div>
+              </div>
+              <div class="flexy">
+                <div class="heado">
+              <label for="cloud-3-input">Cloud Preset</label>
+            </div>
+              <div id="cloud-3" class="inputo">
+                <input id="cloud-3-input" name="cloud-3-input" minlength="5" type="text" placeholder="" />
+              </div>
+              </div>
+              </div>
+              <div class="fileview"><pre id="fileContents" contenteditable="true"></pre></div>
+              <input type="hidden" id="hiddenFileContents" />
+            </div>
+            </div>
+          </editor>
+          </div>
+          </div>
+          <div class="kpi-mess font-color-three" id="statistics"></div>
+          <div class="cl2 pleft" id="niv-text"></div>
+      </div>
+      <div class="item4">
+        <div id="footer" class="footer"></div>
+        </div>
+    </div>
+  </div>
+</div>
+
+   <script defer id="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/13.0.1/markdown-it.min.js" src="./js/markdown-it.min.js"></script>
+
+  <!-- concat for production -->
+  <script src="./js/_code.js"></script>
+
+   <!-- rem for production -->
+
+  
+  </body>
+</html>

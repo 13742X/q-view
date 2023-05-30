@@ -1,0 +1,18 @@
+/* create footer */
+.logo{
+    z-index:100;
+}
+.heado{
+    padding:0;
+    top: 25%;
+    position: relative;
+}
+.html{
+    font-size:70%;
+}
+.burger{
+    padding-left:12px !important;
+}
+.expand{
+    display:none;
+}

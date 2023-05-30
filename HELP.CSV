@@ -1,0 +1,14 @@
+m1,Welcome,orphan
+m8,Getting started,parent
+m10,Overview,child
+m11,Journey,child
+m12,Extension,child
+m13,Navigation,child
+m14,Settings,child
+m7,Basics,orphan
+x,How it works,parent
+m2,Markdown,child
+m5,Syntax,child
+m3,Grouping,child
+m4,Files,orphan
+m6,Settings,orphan
