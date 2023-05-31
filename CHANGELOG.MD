@@ -13,6 +13,8 @@ Latest (May 2023)
 * Refresh Editor to default
 * Text encoding for new files
 * Darkmode bug fixed so works on page reload
+* Text clicked toggles a yellow highlight
+* Rebrand to VIEW-Q with demo site at https://view-q.com
 
 **0.0.2.2:**
 * Css colors split into own selectors
@@ -72,7 +74,6 @@ Minor changes:
 **0.0.0.1**
 * Chrome Extension
 * Expandable to full screen
-* Website version available at Systemm.co/crx. 
 * Can view and click menus - 2 levels. 
 * View markdown as html or plain text under Settings. 
 * Banner icons  - Refresh ; Help (opens hardcoded help files) ; Expand ; Settings. 

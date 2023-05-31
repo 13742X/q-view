@@ -1,16 +1,16 @@
 {
-  "name": "systemm",
+  "name": "view-q",
   "version": "1.0.0",
   "description": "Key js",
   "main": "files.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/13742X/production-markdown-app"
+    "url": "git+https://github.com/13742X/view-q"
   },
-  "author": "13742x and Regeo Labs ft SystemM",
+  "author": "13742x and Regeo Labs ft View-Q",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/13742X/production-markdown-app/issues"
   },
-  "homepage": "https://github.com/13742X/production-markdown-app"
+  "homepage": "https://view-q.com"
 }

@@ -19,3 +19,18 @@ request.onerror = function(event) {
 
      document.getElementById('reset').innerText="CLEARED!";
  };
+// version number
+fetch('./manifest.json')
+.then(response => response.json())
+.then(data => {
+  // Extract the version number
+  const version = data.version;
+  const name = data.name;
+
+  // Display the version in a div
+  const versionDiv = document.getElementById('version');
+  versionDiv.textContent = `${name} - ${version}`;
+})
+.catch(error => {
+  console.error('Error:', error);
+});

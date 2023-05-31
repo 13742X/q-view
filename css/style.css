@@ -1,5 +1,6 @@
 
 /* https://ajar.freshdesk.com/support/solutions/articles/26000037335-how-to-hide-your-content-until-everything-is-loaded */
+
 #container { display:none; }
 body.loaded #container { display:block; }
 
@@ -9,7 +10,7 @@ body.loaded #container { display:block; }
   width: 100%;
   height: 100%;
   z-index: 9999;
-  background: url('../images/spinner.svg') 
+  background: url('spinner.svg') 
               50% 50% no-repeat rgb(249,249,249);
 }
 
@@ -54,6 +55,11 @@ pre:focus, input:focus{
 .grey-day{
   color:darkgrey;
 }
+
+.highlight {
+  background-color: yellow;
+}
+
 .error-red{
   color:red;
 }
@@ -475,9 +481,12 @@ summary{
   padding-left:12px;
 }
 details:hover, .background-color-three{
-  border-left:5px solid chocolate;
   border-radius:3px;
   margin-left:0;
+  cursor:pointer;
+}
+details:hover{
+  border-left:5px solid mediumpurple;
   cursor:pointer;
 }
 .settingscontainer{
@@ -510,9 +519,9 @@ details:hover, .background-color-three{
   text-decoration-line: underline;
   text-decoration-thickness: 5px;
   text-underline-offset: 4px;
-  text-decoration-color: chocolate;
   text-decoration-skip:unset;
 }
+
 
 .sidebar a:hover:not(.active), .settingscontainer a:hover:not(.active) {
   text-decoration-line: underline;
@@ -653,17 +662,17 @@ cursor:pointer;
   border-radius: 50%;
   transition: transform 0.3s;
 }
-#darkModeToggle, #encryptme, #cloudme, #localme {
+#darkModeToggle, #scrollToggle, #encryptme, #cloudme, #localme {
   position: absolute;
   opacity: 0;
   width: 0;
   height: 0;
 }
-#darkModeToggle:checked + .toggle-label:before, #encryptme:checked + .toggle-label:before, #localme:checked + .toggle-label:before, #cloudme:checked + .toggle-label:before  {
+#darkModeToggle:checked + .toggle-label:before, #encryptme:checked + .toggle-label:before, #localme:checked + .toggle-label:before, #cloudme:checked + .toggle-label:before, #scrollToggle:checked + .toggle-label:before  {
   background-color: #3d3d3d;
 }
 
-#darkModeToggle:checked + .toggle-label:after, #encryptme:checked + .toggle-label:after, #localme:checked + .toggle-label:after, #cloudme:checked + .toggle-label:after {
+#darkModeToggle:checked + .toggle-label:after, #encryptme:checked + .toggle-label:after, #localme:checked + .toggle-label:after, #cloudme:checked + .toggle-label:after, #scrollToggle:checked + .toggle-label:after {
   transform: translateX(16px);
 }
 

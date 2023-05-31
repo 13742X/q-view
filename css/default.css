@@ -26,7 +26,7 @@ body,html{
   background-color: white !important;
 }
 .background-color-two{
-  background-color:chocolate !important;
+  background-color:mediumpurple !important;
 }
 .background-color-three{
   /* background-color:whitesmoke; */
@@ -37,7 +37,7 @@ body,html{
 }
 .background-color-five, pre{
   /* background-color: black; */
-  background-color: darkorange !important;
+  background-color: mediumpurple !important;
 }
 .font-color-one{
   /* color:white; */
@@ -51,8 +51,9 @@ body,html{
   /* color:gainsboro; */
   color:gainsboro !important;
 }
-
-
+.text-decoration-color{
+  text-decoration-color: mediumpurple !important;
+}
 
   a, a:hover{
     color:darkslategray;

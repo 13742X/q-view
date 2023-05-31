@@ -1,5 +1,5 @@
 {
-  "name": "SystemM Viewer",
+  "name": "View-Q Document Viewer",
   "version": "0.0.2.3",
   "description": "Simple markdown viewer to make it is easier and faster to read paragraphs and chapters.",
   "manifest_version": 3,
@@ -17,7 +17,7 @@
     },
     "content_scripts": [
       {
-        "matches": ["https://*.systemm.co/*"],
+        "matches": ["https://*.view-q.com/*"],
         "css": ["*.css"],
         "js": ["*.js"]
       }

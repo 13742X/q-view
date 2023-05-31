@@ -4,11 +4,31 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title id="tit"></title>
-    <!-- dont uses style min as aggressively removes webkit -->
-    <link id="view-q" rel="stylesheet" href="./css/style.css" />
+    <!-- minify aggressively removes webkit so has own css-->
+    <link rel="stylesheet" href="./css/style.min.css" />
+    <link id="scrollsheet" rel="stylesheet" href="./css/webkit.css" />
     <link id="display" rel="stylesheet" href="" />
     <link id="theme" rel="stylesheet" href="" />
     <link id="stylesheet" rel="stylesheet" href="./css/dark-mode.min.css" disabled aria-disabled="">
+    <meta name="description" content="View-Q is a simple to use document viewer using markdown syntax files. Easy to create, no HTML required and files are viewed in the browser." />
+    <link rel="icon" type="image/x-icon" href="images/q16.svg">
+    <meta property="og:description" content="document viewer markdown serverless" />
+    <meta name="twitter:title" content="view-q - lightweight document viewer" />
+    <meta property="og:title" content="view-q" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://view-q.com" />
+    <meta property="og:image" content="https://view-q.com/android-chrome-384x384.png?v1" />
+    <meta property="og:site_name" content="view-q" />
+    <meta name="twitter:description" content="view-q - lightweight document viewer" />
+    <meta name="twitter:image" content="https://view-q.com/android-chrome-384x384.png?v1" />
+    <meta property="og:locale" content="en_GB" />
+    <meta name="twitter:text:title" content="view-q - the lightweight document viewer" />
+    <meta name="twitter:site" content="@view-q" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:url" content="https://view-q.com" />
+    <meta name="twitter:app:name:googleplay" content="view-q.com" />
+    <meta name="twitter:app:id:googleplay" content="view-q.com" />
+    <meta name="apple-mobile-web-app-title" content="view-q.com" />
   </head>
   <body id="body" class="background-color-one font-color-two">
     <div id="loader"></div>
@@ -25,18 +45,28 @@
               <a id="burger"><img class="icon-svg" src="./images/burger.svg" /></a>
               <div class="burger-text icon-text-color tac">menu</div>
           </div>
+
+
+
+
+
           <div id="namer" class="namer"></div>
           <div class="internet-offline" id="internet-status"></div>
           <div class="logo refresh icon-svg" id="logo"></div>
         </div>
     <div class="flexy icon-bar background-color-three">
       <div class="dropdown">
-        <span class="dropdown-title">Links</span>
+        <span class="dropdown-title"><image class="icon-svg"src="./images/links.svg"/></span>
+        <div class="icon-text icon-text-color">views</div>
         <div class="dropdown-content dropdown-title background-color-one" id="links-dropdown">
       </div>
         </div>
     <div id="iconpad" class="iconpad tac">
     </div>
+    <!-- <div id="speakButton" class="settings-only refresh tac">
+      <f id=""><img class="icon-svg" src="./images/speaker.svg" /></f>
+      <div class="icon-text icon-text-color">speak</div>
+    </div>    -->
     <div id="the-options" class="settings-only refresh tac">
       <a href="options.html" target="_blank"><img class="icon-svg" src="./images/options.svg" /></a>
       <div class="icon-text icon-text-color">options</div>
@@ -82,8 +112,14 @@
           <div id="splash" class="splasher">
           </div>
             <h1 class="head font-color-two">Settings</h1>
+            <div>
             <input type="checkbox" id="darkModeToggle">
 <label for="darkModeToggle" class="toggle-label">Dark mode</label>
+</div>
+<div>
+<input type="checkbox" id="scrollToggle">
+<label for="scrollToggle" class="toggle-label">Hide Scrollbars</label>
+</div>
             <h2>Import new files</h2>
             <div class="flexy h50">
               <div class="heado">Public Key</div>
@@ -363,6 +399,5 @@
 
    <!-- rem for production -->
 
-  
   </body>
 </html>
