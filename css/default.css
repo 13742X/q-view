@@ -20,6 +20,16 @@ body,html{
     hyphens: none;
 }
 
+a, a:active{
+  text-decoration:underline;
+  text-underline-position: under;
+  text-decoration-color: black;;
+}
+a:hover{
+  text-decoration:none;
+  text-underline-position: under;
+  text-decoration-color: mediumpurple;
+}
 
 .background-color-one{
   /* background-color:white; */
@@ -54,14 +64,6 @@ body,html{
 .text-decoration-color{
   text-decoration-color: mediumpurple !important;
 }
-
-  a, a:hover{
-    color:darkslategray;
-    text-decoration: none;
-  }
-  a:visited{
-    text-decoration: none;
-  }
   ul {
     list-style-type: circle;
   }

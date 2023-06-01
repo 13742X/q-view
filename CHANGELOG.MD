@@ -7,13 +7,19 @@ Latest (May 2023)
 **0.0.2.3:**
 * Options now opens in own tab
 * Default style sheet now applied on first use
+* Toggle scrollbar (off by default)
+* Depreciated relaod to a view icon
+* Switch between CRX and WWW / Tab view different style sheets
+* Examples in Help.md points to GitHub Examples repo
 * New File button for creating new files
 * File names (used in local storage) can be changed on the page before saving
 * Settings has scrolling menu
 * Refresh Editor to default
 * Text encoding for new files
 * Darkmode bug fixed so works on page reload
+* Hide Expand icon if in a Tab
 * Text clicked toggles a yellow highlight
+* All *.MD and *.CSV are assumed to be in Uppercase
 * Rebrand to VIEW-Q with demo site at https://view-q.com
 
 **0.0.2.2:**

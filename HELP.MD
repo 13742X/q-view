@@ -195,9 +195,9 @@ Cross-Origin Resource Sharing (CORS) is an HTTP-header based mechanism that allo
 
 To serve files using GitHub as a CDN, use this URL structure: 
 
-https://cdn.jsdelivr.net/gh/user/repo/file.js.
+https://cdn.jsdelivr.net/gh/user/repo@latest/file.js.
 
-Example is https://cdn.jsdelivr.net/gh/13742x/view-q/HELP.MD
+Example is https://cdn.jsdelivr.net/gh/13742x/view-q@latest/HELP.MD
 
 Note the file names are case sensitive. This is very fast and cached. However it is a third party so due diligence risk should be considered.
 
@@ -322,5 +322,6 @@ High level
 
 ]]
 {{m15}}[[
-Coming soon..
+    
+[See Examples](?JTNGYSUzREV4YW1wbGVzJTI2YiUzRGh0dHBzJTNBJTJGJTJGcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSUyRjEzNzQyWCUyRnZpZXctcS1leGFtcGxlcyUyRm1haW4lMkZleGFtcGxlcy5tZCUyNmMlM0RodHRwcyUzQSUyRiUyRnJhdy5naXRodWJ1c2VyY29udGVudC5jb20lMkYxMzc0MlglMkZ2aWV3LXEtZXhhbXBsZXMlMkZtYWluJTJGZXhhbXBsZXMuY3N2JTI2ZCUzRGRlZmF1bHQtbG9nby5zdmc=)
 ]]

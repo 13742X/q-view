@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title id="tit"></title>
     <!-- minify aggressively removes webkit so has own css-->
-    <link rel="stylesheet" href="./css/style.min.css" />
+    <link rel="stylesheet" href="./css/style.min.css?v=1" />
     <link id="scrollsheet" rel="stylesheet" href="./css/webkit.css" />
     <link id="display" rel="stylesheet" href="" />
     <link id="theme" rel="stylesheet" href="" />
     <link id="stylesheet" rel="stylesheet" href="./css/dark-mode.min.css" disabled aria-disabled="">
-    <meta name="description" content="View-Q is a simple to use document viewer using markdown syntax files. Easy to create, no HTML required and files are viewed in the browser." />
+    <meta name="description" content="View-Q is a simple to use document viewer using markdown zero knowledge syntax files. Easy to create, your files, no HTML required and files are viewed in the browser." />
     <link rel="icon" type="image/x-icon" href="images/q16.svg">
     <meta property="og:description" content="document viewer markdown serverless" />
     <meta name="twitter:title" content="view-q - lightweight document viewer" />
@@ -55,7 +55,7 @@
           <div class="logo refresh icon-svg" id="logo"></div>
         </div>
     <div class="flexy icon-bar background-color-three">
-      <div class="dropdown">
+      <div class="dropdown views">
         <span class="dropdown-title"><image class="icon-svg"src="./images/links.svg"/></span>
         <div class="icon-text icon-text-color">views</div>
         <div class="dropdown-content dropdown-title background-color-one" id="links-dropdown">
@@ -75,10 +75,6 @@
       <a target="_blank" href="sandbox.html"><img class="icon-svg" src="./images/sandbox.svg" /></a>
       <div class="icon-text icon-text-color">sandbox</div>
     </div>
-    <div id="refresher" class="settings-only refresh tac">
-      <a id ="reload"><img class="icon-svg" src="./images/reload.svg" /></a>
-      <div class="icon-text icon-text-color">reload</div>
-    </div>
     <div id="help" class="help tac">
       <a id ="helpy"><img class="icon-svg" src="./images/help.svg" /></a>
       <div class="icon-text icon-text-color">help</div>
@@ -86,6 +82,10 @@
     <div id="expand" class="expand tac">
       <a id ="expando" target="blank" href="index.html"><img class="icon-svg" src="./images/expand.svg" /></a>
       <div class="icon-text icon-text-color">expand</div>
+    </div>
+    <div id="refresher" class="settings-only refresh tac">
+      <a id ="reload"><img class="icon-svg" src="./images/document.svg" /></a>
+      <div class="icon-text icon-text-color">view</div>
     </div>
     <div id="dots" class="settings tac">
       <a id="settings"><img class="icon-svg" src="./images/settings.svg" /></a>
@@ -117,7 +117,7 @@
 <label for="darkModeToggle" class="toggle-label">Dark mode</label>
 </div>
 <div>
-<input type="checkbox" id="scrollToggle">
+<input checked type="checkbox" id="scrollToggle">
 <label for="scrollToggle" class="toggle-label">Hide Scrollbars</label>
 </div>
             <h2>Import new files</h2>
@@ -132,12 +132,12 @@
                   type="text"
                 />
               </div>
-              <span class="import-mess font-color-two" id="create-message"></span>
             </div>
             <div class="flexy h50">
               <div class="heado"></div>
               <div class="butto">
                 <div class="mybutton background-color-two font-color-one" id="importlink">IMPORT</div>
+                <span class="import-mess font-color-two" id="create-message"></span>
               </div>
             </div>
             <f id="credentials-header"></f>
@@ -159,6 +159,7 @@
   </div>
 </div>
 <h2>This</h2>
+<a class="general-href" href="?JTNGYSUzREV4YW1wbGVzJTI2YiUzRGh0dHBzJTNBJTJGJTJGcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSUyRjEzNzQyWCUyRnZpZXctcS1leGFtcGxlcyUyRm1haW4lMkZleGFtcGxlcy5tZCUyNmMlM0RodHRwcyUzQSUyRiUyRnJhdy5naXRodWJ1c2VyY29udGVudC5jb20lMkYxMzc0MlglMkZ2aWV3LXEtZXhhbXBsZXMlMkZtYWluJTJGZXhhbXBsZXMuY3N2JTI2ZCUzRGRlZmF1bHQtbG9nby5zdmc=" >examples</a>
             <div class="flexy h50">
               <div class="heado">Markdown File</div>
               <div class="inputo">
@@ -398,6 +399,7 @@
   <script src="./js/_code.js"></script>
 
    <!-- rem for production -->
+
 
   </body>
 </html>

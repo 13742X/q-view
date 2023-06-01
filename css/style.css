@@ -376,6 +376,7 @@ input[type=password] {
   line-height: 0.8;
   height:60px;
   top:0;
+  border-bottom:1px solid white;
   /* background-color:white; */
   /* border-bottom:1px solid gainsboro; */
 }
@@ -384,20 +385,21 @@ input[type=password] {
   position:fixed;
   width:100%;
   font-size:200%;
-  padding-top:5px;
+  padding-top:10px;
   bottom:0;
   height:45px;
   line-height: 0.8;
+  border-top:1px solid white;
   padding-bottom: 10px;
   /* background-color:white; */
   /* border-bottom:1px solid gainsboro; */
 }
 .burger{
   padding-left:25px;
-  /* xxxxx:100% */
+  z-index:1;
 }
 .iconpad{
-  width:50%;
+  width:100%;
 }
 .settings{
   width:100px;
@@ -491,6 +493,10 @@ details:hover{
 }
 .settingscontainer{
   position:fixed;
+}
+.general-href{
+  text-decoration:underline;
+  text-underline-position: under;
 }
 .sidebar, .settingscontainer {
    margin: 0;
@@ -712,10 +718,14 @@ cursor:pointer;
   xxxxx:50px;
   xxxxx:100%;
 } */
-
+.search-box{
+  display:none !important;
+}
 .sidebar{
   width:200px;
 }
+.namer{
+  padding-right:0px !important;
 }
 
 .hdr{
@@ -728,3 +738,4 @@ cursor:pointer;
   width:56%;
 }
 
+}
