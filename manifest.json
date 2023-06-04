@@ -27,11 +27,6 @@
     },
     "options_page": "options.html",
     "open_in_tab": true,
-    "permissions": [
-      "clipboardWrite",
-      "file:///*/*"
-  ] 
-  ,
     "host_permissions": [ "https://*/*" ]
   }
 }
