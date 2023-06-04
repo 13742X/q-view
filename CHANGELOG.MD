@@ -2,13 +2,19 @@
 {{{m1}}}[[
 # Versions
 
-Latest (May 2023)
+Latest (June 2023)
+**0.0.2.4:**
+* markdown allows for embedded videos including iframe YouTube
+* improved views dropdown
+* examples accessible from the Help
+* menu fast navigation
+* mobile friendly PWA if required
 
 **0.0.2.3:**
 * Options now opens in own tab
 * Default style sheet now applied on first use
 * Toggle scrollbar (off by default)
-* Depreciated relaod to a view icon
+* Depreciated reload to a view icon
 * Switch between CRX and WWW / Tab view different style sheets
 * Examples in Help.md points to GitHub Examples repo
 * New File button for creating new files

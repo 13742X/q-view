@@ -34,6 +34,8 @@ Reset and delete everything back to default.
 
 ![Help](https://res.cloudinary.com/vantacloud/image/upload/v1685222836/smm-summary.png)
 
+!!![https://www.youtube.com/embed/ijqqJHHi4Lg][600,600]
+
 ]]
 {{m2}}
 [[
@@ -74,7 +76,7 @@ There are a number of flavors, but we use the CommonMark specification as it is 
 
 The CommonMark specification, which defines the syntax for Markdown, was developed by a group of individuals known as the CommonMark community. It was initiated by John MacFarlane, the creator of Pandoc, and was further developed and refined through community collaboration. The goal was to establish a standard specification for Markdown that would be consistent across different implementations and provide a clear and unambiguous syntax for users. The CommonMark community worked collectively to create and maintain the specification, ensuring its openness and accessibility to all.
 
-# summary
+# Summary
 Here's a summary of the key syntax elements in the CommonMark specification:
 
 Headers: Use hash symbols (#) at the beginning of a line to create headers. The number of hash symbols determines the header level.
@@ -85,7 +87,7 @@ Emphasis: Surround text with asterisks (*) or underscores (_) to make it italic,
 
 Links: Create links by enclosing the link text in square brackets ([]) and the URL or reference in parentheses (()). Optionally, you can add a title inside double quotes.
 
-Images: Insert images using an exclamation mark (!), followed by the alt text in square brackets, and the image URL in parentheses. You can also include an optional title.
+Images: Insert images using an exclamation mark (!), followed by the alt text in square brackets, and the image URL in parentheses. You can also include an optional title. See below for extended use of the ! to embed videos and iframes
 
 Lists: Create unordered lists using hyphens (-), plus signs (+), or asterisks (*) as list markers. For ordered lists, use numbers followed by periods.
 
@@ -103,10 +105,21 @@ These are the fundamental syntax elements in the CommonMark specification. Diffe
 
 A live demo can be found in the ["sandbox"](sandbox.html)
 
+View-Q has some extra syntax, not included in the main protocol. These are to add extra functionality such as embedding responsive YouTube videos or grouping text.
+
+ Videos - ! ! [moview.mp4][video/mp4][320,240]
+
+The [320,240] represent the height and width.
+
+ Youtube or iframe ! ! ! [https://www.youtube.com/embed/ijqqJHHi4Lg][600,600]
+ 
+The [600,600] represent the height and width.
+
 ]]
 
 {{m3}}
 [[
+    
 # How to create a group
 
 Grouping text together and giving them an index id. 

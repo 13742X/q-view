@@ -457,35 +457,6 @@ input[type=password] {
   position: -webkit-sticky;
   position: sticky;
 }
-
-
-.round-button-container{
-  padding-left:20px;
-  padding-top:20px;
-}
-.round-button {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #ccc;
-  line-height: 20px;
-  text-align: center;
-  border: none;
-  cursor: pointer;
-}
-
-.round-button:hover {
-  background-color: #aaa;
-}
-
-.round-button:focus {
-  outline: none;
-}
-
-#backwardButton {
-  margin-right: 100px;
-}
-/* ///// */
 .right{
  width:100%;
  overflow-y: scroll;
@@ -795,6 +766,7 @@ cursor:pointer;
   width:86%;
 }
 .inputo{
-  width:56%
+  width:56%;
 }
+
 }

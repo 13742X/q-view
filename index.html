@@ -6,10 +6,15 @@
     <title id="tit"></title>
     <!-- minify aggressively removes webkit so has own css-->
     <link rel="stylesheet" href="./css/style.min.css?v=1" />
-    <link id="scrollsheet" rel="stylesheet" href="./css/webkit.css" />
+    <link id="scrollsheet" rel="stylesheet" href="./css/webkit.min.css" />
     <link id="display" rel="stylesheet" href="" />
     <link id="theme" rel="stylesheet" href="" />
-    <link id="stylesheet" rel="stylesheet" href="./css/dark-mode.min.css" disabled aria-disabled="">
+    <link id="stylesheet" rel="stylesheet" href="./css/dark-mode.min.css" disabled aria-disabled="" />
+        <!-- pwa -->
+    <link id="pwa-manifest" rel="manifest" href="./pwa/manifest.json" />
+    <script id="pwa-sw" src="./pwa/sw.js"></script>
+    <link rel="icon" href="./images/q256.svg">
+
     <meta name="description" content="View-Q is a simple to use document viewer using markdown zero knowledge syntax files. Easy to create, your files, no HTML required and files are viewed in the browser." />
     <link rel="icon" type="image/x-icon" href="images/q16.svg">
     <meta property="og:description" content="document viewer markdown serverless" />
@@ -33,7 +38,7 @@
   <body id="body" class="background-color-one font-color-two">
     <div id="loader"></div>
     <div class="search-box">
-    <input class="search-input" type="text" id="searchTerm" placeholder="Enter search term">
+    <input class="search-input" type="text" id="searchTerm" placeholder="&#x1F50D;">
   </div>
     <div id="content">
   <div class="global">
@@ -42,24 +47,31 @@
         <div id="topbanner" class="hdr"></div>
         <div class="flexy other-icon-bar background-color-three">
           <div id="burgerking" class="burger">
-              <a id="burger"><img class="icon-svg" src="./images/burger.svg" /></a>
-              <div class="burger-text icon-text-color tac">menu</div>
+
+            <div id="burgercontainer" class="burgercontainer">
+              <div class="bar1 background-color-five"></div>
+              <div class="bar2 background-color-five"></div>
+              <div class="bar3 background-color-five"></div>
+            </div>
+
+
           </div>
 
 
 
 
 
-          <div id="namer" class="namer"></div>
+
+          <div id="namer" class="namer tac"></div>
           <div class="internet-offline" id="internet-status"></div>
           <div class="logo refresh icon-svg" id="logo"></div>
         </div>
     <div class="flexy icon-bar background-color-three">
-      <div class="dropdown views">
+      <div id="linkviews" class="dropdown views">
         <span class="dropdown-title"><image class="icon-svg"src="./images/links.svg"/></span>
         <div class="icon-text icon-text-color">views</div>
-        <div class="dropdown-content dropdown-title background-color-one" id="links-dropdown">
       </div>
+      <div class="dropdown-content dropdown-title background-color-one hide" id="links-dropdown">
         </div>
     <div id="iconpad" class="iconpad tac">
     </div>
@@ -103,7 +115,15 @@
             <a href="#editor-header" class="menu-item font-color-two linkd">Editor</a>
         </div>
         </div>
+<div id="back-forth" class="round-button-container">
+        <button class="round-button" id="backwardButton"><</button>
+        <button class="round-button" id="forwardButton">></button>
+      </div>
+<!-- menus go here -->
         <div id="items" class="items"></div>
+
+
+<!-- body goes here -->
       </div>
       <div id="thetext" class="item3">
         <div class="cl2 hide setlist" id="thesettings">
@@ -399,7 +419,6 @@
   <script src="./js/_code.js"></script>
 
    <!-- rem for production -->
-
 
   </body>
 </html>
