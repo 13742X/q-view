@@ -1,8 +1,25 @@
-
+m1,Versions,orphan
 {{{m1}}}[[
 # Versions
 
 Latest (June 2023)
+**0.0.2.5:**
+* new blobber page to convert files to base64 for purposes of encryption
+* updated bug where encrypted file was not stored in localstorage
+* controls on filename and password for files
+* extension options link in settings
+* burger menu misbehaving fixed
+* on decryption an icon (unlocked padlock) appears in Settings next to the file
+* removal of rogue starting " in encrypted files
+* editor removed from settings now replaces sandbox in new tab
+* editor has floating toolbar to apply basic markdown syntax
+* menu.csv depreciated - menu must be in main file
+* on tag creation, copy public key or copy full https://
+* url shortener - uses server so security considerations required
+* CSP control over rogue iframe activities
+* Mardown-it 13.0.1 does not parse SVGs so hack code to do this as base64 (see https://youtrack.jetbrains.com/issue/JT-70691)
+* options.html dislays the version of the markdown-it used
+
 **0.0.2.4:**
 * markdown allows for embedded videos including iframe YouTube
 * improved views dropdown
@@ -26,7 +43,7 @@ Latest (June 2023)
 * Hide Expand icon if in a Tab
 * Text clicked toggles a yellow highlight
 * All *.MD and *.CSV are assumed to be in Uppercase
-* Rebrand to VIEW-Q with demo site at https://view-q.com
+* Rebrand to Q-VIEWER with demo site at https://app.q-viewer.com
 
 **0.0.2.2:**
 * Css colors split into own selectors

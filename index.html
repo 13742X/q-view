@@ -4,32 +4,39 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title id="tit"></title>
+  <!-- limit iframe activity-->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';">
+
     <!-- minify aggressively removes webkit so has own css-->
     <link rel="stylesheet" href="./css/style.min.css?v=1" />
     <link id="scrollsheet" rel="stylesheet" href="./css/webkit.min.css" />
     <link id="display" rel="stylesheet" href="" />
     <link id="theme" rel="stylesheet" href="" />
     <link id="stylesheet" rel="stylesheet" href="./css/dark-mode.min.css" disabled aria-disabled="" />
+        <!-- pwa -->
+    <link id="pwa-manifest" rel="manifest" href="./pwa/pwa.manifest" />
+    <script id="pwa-sw" src="./pwa/sw.js"></script>
+    <link rel="icon" href="./images/q256.svg">
 
-    <meta name="description" content="View-Q is a simple to use document viewer using markdown zero knowledge syntax files. Easy to create, your files, no HTML required and files are viewed in the browser." />
-    <link rel="icon" type="image/x-icon" href="images/q16.svg">
+    <meta name="description" content="q-viewer is a simple to use document viewer using markdown zero knowledge syntax files. Easy to create, your files, no HTML required and files are viewed in the browser." />
+    <link rel="icon" type="image/x-icon" href="images/c16.png">
     <meta property="og:description" content="document viewer markdown serverless" />
-    <meta name="twitter:title" content="view-q - lightweight document viewer" />
-    <meta property="og:title" content="view-q" />
+    <meta name="twitter:title" content="q-viewer - lightweight document viewer" />
+    <meta property="og:title" content="q-viewer" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://view-q.com" />
-    <meta property="og:image" content="https://view-q.com/android-chrome-384x384.png?v1" />
-    <meta property="og:site_name" content="view-q" />
-    <meta name="twitter:description" content="view-q - lightweight document viewer" />
-    <meta name="twitter:image" content="https://view-q.com/android-chrome-384x384.png?v1" />
+    <meta property="og:url" content="https://q-viewer.com" />
+    <meta property="og:image" content="https://q-viewer.com/android-chrome-384x384.png?v1" />
+    <meta property="og:site_name" content="q-viewer" />
+    <meta name="twitter:description" content="q-viewer - lightweight document viewer" />
+    <meta name="twitter:image" content="https://q-viewer.com/android-chrome-384x384.png?v1" />
     <meta property="og:locale" content="en_GB" />
-    <meta name="twitter:text:title" content="view-q - the lightweight document viewer" />
-    <meta name="twitter:site" content="@view-q" />
+    <meta name="twitter:text:title" content="q-viewer - the lightweight document viewer" />
+    <meta name="twitter:site" content="@q-viewer" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:url" content="https://view-q.com" />
-    <meta name="twitter:app:name:googleplay" content="view-q.com" />
-    <meta name="twitter:app:id:googleplay" content="view-q.com" />
-    <meta name="apple-mobile-web-app-title" content="view-q.com" />
+    <meta name="twitter:url" content="https://q-viewer.com" />
+    <meta name="twitter:app:name:googleplay" content="q-viewer.com" />
+    <meta name="twitter:app:id:googleplay" content="q-viewer.com" />
+    <meta name="apple-mobile-web-app-title" content="q-viewer.com" />
   </head>
   <body id="body" class="background-color-one font-color-two">
     <div id="loader"></div>
@@ -41,28 +48,20 @@
     <div id="#container" class="grid-container">
       <div class="item1">       
         <div id="topbanner" class="hdr"></div>
-        <div class="flexy other-icon-bar background-color-three">
+        <div id="other-icon-bar" class="flexy other-icon-bar background-color-three">
           <div id="burgerking" class="burger">
-
+            <div id="printOnly">Q-VIEWER.COM</div>
             <div id="burgercontainer" class="burgercontainer">
               <div class="bar1 background-color-five"></div>
               <div class="bar2 background-color-five"></div>
               <div class="bar3 background-color-five"></div>
-            </div>
-
-     
+            </div>    
           </div>
-       
-
-       
-         
-
-
           <div id="namer" class="namer tac"></div>
           <div class="internet-offline" id="internet-status"></div>
           <div class="logo refresh icon-svg" id="logo"></div>
         </div>
-    <div class="flexy icon-bar background-color-three">
+    <div id="icon-bar" class="flexy icon-bar background-color-three">
       <div id="linkviews" class="dropdown views">
         <span class="dropdown-title"><image class="icon-svg"src="./images/links.svg"/></span>
         <div class="icon-text icon-text-color">views</div>
@@ -80,8 +79,8 @@
       <div class="icon-text icon-text-color">options</div>
     </div>      
     <div  id="the-sandbox" class="settings-only refresh tac">
-      <a target="_blank" href="sandbox.html"><img class="icon-svg" src="./images/sandbox.svg" /></a>
-      <div class="icon-text icon-text-color">sandbox</div>
+      <a target="_blank" href="editor.html"><img class="icon-svg" src="./images/sandbox.svg" /></a>
+      <div class="icon-text icon-text-color">editor</div>
     </div>
     <div id="help" class="help tac">
       <a id ="helpy"><img class="icon-svg" src="./images/help.svg" /></a>
@@ -101,14 +100,12 @@
     </div>
     </div>   
         </div>
-      <div class="item2 background-color-three">
+      <div id="menubar" class="item2 background-color-three">
         <div id="setting-items" class="items setting-items hide">
         <div id="settings-container" class="settingscontainer"> 
             <a href="#import-new-files-header" class="menu-item font-color-two linkd">Import</a>
             <a href="#this-header" class="menu-item font-color-two linkd">This</a>
             <a href="#packages-header" class="menu-item font-color-two linkd">Packages</a>
-            <a href="#cloud-files-header" class="menu-item font-color-two linkd">Cloud Files</a>
-            <a href="#editor-header" class="menu-item font-color-two linkd">Editor</a>
         </div>
         </div>
 <div id="back-forth" class="round-button-container">
@@ -135,7 +132,9 @@
 <div>
 <input checked type="checkbox" id="scrollToggle">
 <label for="scrollToggle" class="toggle-label">Hide Scrollbars</label>
+<div id="crxoptions"></div>
 </div>
+
             <h2>Import new files</h2>
             <div class="flexy h50">
               <div class="heado">Public Key</div>
@@ -177,7 +176,7 @@
 <h2>This</h2>
 <a class="general-href" href="?JTNGYSUzREV4YW1wbGVzJTI2YiUzRGh0dHBzJTNBJTJGJTJGcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSUyRjEzNzQyWCUyRnZpZXctcS1leGFtcGxlcyUyRm1haW4lMkZleGFtcGxlcy5tZCUyNmMlM0RodHRwcyUzQSUyRiUyRnJhdy5naXRodWJ1c2VyY29udGVudC5jb20lMkYxMzc0MlglMkZ2aWV3LXEtZXhhbXBsZXMlMkZtYWluJTJGZXhhbXBsZXMuY3N2JTI2ZCUzRGRlZmF1bHQtbG9nby5zdmc=" >examples</a>
             <div class="flexy h50">
-              <div class="heado">Markdown File</div>
+              <div class="heado">Markdown File<span id="encrypted-file"></span></div>
               <div class="inputo">
                 <input
                   id="i1"
@@ -190,7 +189,7 @@
                 />
               </div>
             </div>
-            <div class="flexy h50">
+            <!-- <div class="flexy h50">
               <div class="heado">Menu File</div>
               <div class="inputo">
                 <input
@@ -203,7 +202,7 @@
                   accept="text/*"
                 />
               </div>
-            </div>
+            </div> -->
             <div class="flexy h50">
               <div class="heado">Stylesheet File</div>
               <div class="inputo">
@@ -269,7 +268,7 @@
             <div class="flexy h50">
               <div class="heado"></div>
               <div class="butto">
-                <div class="mybutton background-color-two font-color-one" id="createlink">CREATE</div>
+                <div class="mybutton background-color-two font-color-one" id="createlink">+TAGS</div>
               </div>
               <div>
                 <span class="copy-mess font-color-two" id="the-create-message"></span>
@@ -285,29 +284,56 @@
                   type="text"
                 />
               </div>
-            </div>            
+            </div>  
+            <div class="flexy h50">
+              <div class="heado">Short URL</div>
+              <div class="inputo">
+                <input
+                   class=""
+                  id="short-url"
+                  readonly
+                  aria-readonly=""
+                  type="text"
+                />
+              </div>
+            </div>  
             <div class="flexy h50">
               <div class="heado"></div>
               <div class="butto">
-                <div class="mybutton background-color-two font-color-one" id="copyButton">COPY</div>
+                <div class="mybutton background-color-two font-color-one" id="createURL">+URL</div>
               </div>
-              <div>
                 <span class="hide copy-mess font-color-two font-color-one" id="copy-message">Copied!</span>
+              <div>
+                <span class="copy-mess font-color-two" id="the-url-message"></span>
+              </div>
+            </div>            
+            <div class="flexy h50">
+              <div class="copy-button-heado"></div>
+              <div class="butto">
+                <div class="mybutton background-color-two font-color-one" id="copyButton"><img src="./images/copy.svg"/> PK</div>
+              </div>
+              <br/>
+              <div class="butto">
+                <div class="mybutton background-color-two font-color-one" id="copyFullButton"><img src="./images/copy.svg"/> HTTP</div>
+              </div>
+              <br/>
+              <div class="butto">
+                <div class="mybutton background-color-two font-color-one" id="copyURLButton"><img src="./images/copy.svg"/> URL</div>
               </div>
             </div>                 
-<h2>Local Files</h2>   
+<!-- <h2>Local Files</h2>   
         <f id="cloud-files-header"></f>
           <div class="fileviewcontainer">
           <ul id="myDetails"></ul>
           <div class="heado" id="output"></div>
-          </div>
-          <h2>Cloud Files</h2>   
+          </div> -->
+          <!-- <h2>Cloud Files</h2>   
           <f id="editor-header"></f>
           <div class="fileviewcontainer">
           <div id="cloud-list"></div>
           <div class="copy-mess">Cloud items cannot be deleted here and must be deleted at the Cloud. Stay safe and only upload encrypted files.</div>
-          </div>    
-          <editor id="editor-area">
+          </div>     -->
+          <editor class="hide" id="editor-area">
             <h2>Editor</h2>
             <div class="fileviewcontainer">
               <div class="">
@@ -327,7 +353,7 @@
 
 
                 <div class="flexy h50">
-                  <div class="heado">File Name</div>
+                  <div class="heado">File Name</div><span class="enter-filename error-red">*</span>
                   <div class="inputo">
                     <input id="fileName" name="fileName" minlength="5" type="text" placeholder="e.g example.md" />
                   </div>
@@ -351,15 +377,9 @@
                 <input type="checkbox" id="localme" name="localme">
                 <label for="localme" class="toggle-label">Save to local?</label>
 
-                <div></div>
-
-
-
-
-  
-           
+                <div></div>         
               </div>
-              <div id="new-pwd-container" class="inputo hide">
+              <div id="new-pwd-container" class="inputo hide"><span class="enter-password error-red">*</span>
                 <input id="new-pwd" autocomplete="current-password" name="i5" minlength="10" type="password" placeholder="" />
                 <span class="eye-container">
                   <div id="e2" class="eye"></div>
@@ -409,22 +429,22 @@
   </div>
 </div>
   
-   <script defer id="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/13.0.1/markdown-it.min.js" src="./js/markdown-it.min.js"></script>
-
+   <script id="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/13.0.1/markdown-it.min.js" src="./js/markdown-it.min.js"></script>
+   <script id="qviewer" src="./js/markdown-it-plus.min.js"></script>
   <!-- concat for production -->
   <!-- <script src="./js/_code.js"></script> -->
   
    <!-- rem for production -->
 
-    <script preload src="./jsdev/0-url.min.js"></script>
-    <script preload src="./jsdev/1-files.min.js"></script>
-    <script defer src="./jsdev/2-active.min.js"></script>
-    <script defer src="./jsdev/3-cloudlist.min.js"></script> 
-    <script defer src="./jsdev/4-markdown.min.js"></script>
-    <script defer src="./jsdev/6-database.min.js"></script>
-    <script defer src="./jsdev/7-crypt.min.js"></script>
-    <script defer src="./jsdev/8-google.min.js"></script>
-    <script defer src="./jsdev/9-internet.min.js"></script>
-    <script defer src="./jsdev/10-cloudinary.min.js"></script>
+    <script preload src="./js/0-url.min.js"></script>
+    <script preload src="./js/1-files.min.js"></script>
+    <script defer src="./js/2-active.min.js"></script>
+    <!-- <script defer src="./jsdev/3-cloudlist.min.js"></script>  -->
+    <script defer src="./js/4-markdown.min.js"></script>
+    <!-- <script defer src="./jsdev/6-database.min.js"></script> -->
+    <script defer src="./js/7-crypt.min.js"></script>
+    <script defer src="./js/8-google.min.js"></script>
+    <script defer src="./js/9-internet.min.js"></script>
+    <!-- <script defer src="./jsdev/10-cloudinary.min.js"></script> -->
   </body>
 </html>

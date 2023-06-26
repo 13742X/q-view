@@ -1,6 +1,6 @@
 {
-  "name": "View-Q Document Viewer",
-  "version": "0.0.2.4",
+  "name": "Q-Viewer Document Viewer",
+  "version": "0.0.2.5",
   "description": "Simple markdown viewer to make it is easier and faster to read paragraphs and chapters.",
   "manifest_version": 3,
   "icons": {
@@ -17,7 +17,7 @@
     },
     "content_scripts": [
       {
-        "matches": ["https://*.view-q.com/*"],
+        "matches": ["https://*.q-viewer.com/*"],
         "css": ["*.css"],
         "js": ["*.js"]
       }
@@ -27,6 +27,34 @@
     },
     "options_page": "options.html",
     "open_in_tab": true,
-    "host_permissions": [ "https://*/*" ]
-  }
+    "permissions": [
+      "storage",
+      "scripting"
+  ],
+  "host_permissions": [
+    "file:///*"
+  ], 
+  "optional_host_permissions": [
+    "*://*/"
+  ],
+  "optional_permissions": [
+    "webRequest"
+  ],
+  "web_accessible_resources": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "resources": [
+        "/js/markdown-it.min.css",
+        "/js/markdown-it-plus.min.css"      
+      ]
+    }
+  ]
 }
+}
+
+
+
+
+

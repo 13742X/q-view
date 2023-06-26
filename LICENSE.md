@@ -176,7 +176,7 @@ Apache License
    END OF TERMS AND CONDITIONS
 
 
-Copyright (c) 2023 View-q, Systemm (r), 13742x and Regeo Limited.
+Copyright (c) 2023 Q-Viewer, Quantum-h, View-q, Systemm (r), 13742x and Regeo Limited.
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.

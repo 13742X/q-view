@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Concatenate Files</title>
+</head>
+<body>
+  <h1>Concatenate Files</h1>
+<div>Select the js in number order, save to a file, copy contents to _code.js</div>
+  <button id="concatenateButton">Concatenate Files</button>
+
+  <script>
+    function concatenateFiles(files) {
+      const filePromises = files.map(file => {
+        return new Promise((resolve, reject) => {
+          const fileReader = new FileReader();
+          fileReader.onload = event => resolve(event.target.result);
+          fileReader.onerror = event => reject(event.target.error);
+          fileReader.readAsText(file);
+        });
+      });
+
+      Promise.all(filePromises)
+        .then(fileContents => {
+          const concatenatedContent = fileContents.join('\n');
+          const blob = new Blob([concatenatedContent], { type: 'application/javascript' });
+          const link = document.createElement('a');
+          link.href = URL.createObjectURL(blob);
+          link.download = 'concat.min.js';
+          link.click();
+        })
+        .catch(error => {
+          console.error('Error concatenating files:', error);
+        });
+    }
+
+    const concatenateButton = document.getElementById('concatenateButton');
+    concatenateButton.addEventListener('click', function() {
+      const filesInput = document.createElement('input');
+      filesInput.type = 'file';
+      filesInput.multiple = true;
+      filesInput.addEventListener('change', function(event) {
+        const files = Array.from(event.target.files);
+        concatenateFiles(files);
+      });
+      filesInput.click();
+    });
+  </script>
+</body>
+</html>
+

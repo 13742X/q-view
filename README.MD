@@ -15,7 +15,7 @@ Read the HELP.MD.
 
 # Markdown
 
-There are a number of standards and commonly used protocols. This uses CommonMark. It also has some custom markdown syntax.
+There are a number of standards and commonly used protocols. This uses CommonMark. There are a number of limitations (e.g support for iframes or grouping) and bugs (e.g SVG files not parsed properly) so we have created a *-plus.js enhancement..
 
 HTML in Markdown documents will pass as is, unless enclosed into inline or multiline preformatted blocks, in which case it will be escaped appropriately.
 
