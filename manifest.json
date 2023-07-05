@@ -1,7 +1,7 @@
 {
   "name": "Q-Viewer Document Viewer",
-  "version": "0.0.2.5",
-  "description": "Simple markdown viewer to make it is easier and faster to read paragraphs and chapters.",
+  "version": "0.0.3.0",
+  "description": "Simple markdown viewer to make it is easier and faster to read stuff.",
   "manifest_version": 3,
   "icons": {
     "16": "./images/c16.png",

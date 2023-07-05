@@ -1,0 +1,16 @@
+/* create footer */
+.logo{
+    z-index:100;
+}
+.heado{
+    padding:0;
+    top: 25%;
+    position: relative;
+}
+.html{
+    font-size:70%;
+}
+/* // hide expand logo */
+.expand{
+    display:none;
+}

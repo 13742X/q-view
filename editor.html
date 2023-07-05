@@ -4,8 +4,18 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- limit iframe activity-->
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';">
+    <!-- <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';"> -->
     <script id="https://cdn.jsdelivr.net/npm/markdown-it@13.0.1/dist/markdown-it.min.js" src="./js/markdown-it.min.js"></script>
+    <script id="https://cdn.jsdelivr.net/npm/markdown-it-sup@1.0.0/dist/markdown-it-footnote.min.js" src="./js/markdown-it-footnote.min.js"></script>
+    <!-- <script id="https://cdn.jsdelivr.net/npm/markdown-it-sup@1.0.0/dist/markdown-it-emojii.min.js" src="./js/markdown-it-emojii.min.js"></script> -->
+    <!-- <script id="https://cdn.jsdelivr.net/npm/markdown-it-sup@1.0.0/dist/markdown-it-checkbox.min.js" src="./js/markdown-it-checkbox.min.js"></script>
+
+    <script id="https://cdn.jsdelivr.net/npm/markdown-it-sup@1.0.0/dist/markdown-it-footnote.min.js" src="./js/markdown-it-footnote.min.js"></script>
+    <script id="https://cdn.jsdelivr.net/npm/markdown-it-sup@1.0.0/dist/markdown-it-sup.min.js" src="./js/markdown-it-sub.min.js"></script>
+    <script id="https://cdn.jsdelivr.net/npm/markdown-it-sup@1.0.0/dist/markdown-it-sup.min.js" src="./js/markdown-it-sup.min.js"></script> -->
+    <link rel="stylesheet" href="./css/highlightjs-codepen.min.css">
+    <!-- <script src="https://unpkg.com/markdown-it-typographer/dist/markdown-it-typographer.min.js"></script> -->
+
     <script id="qversion" src="./js/markdown-it-plus.min.js"></script>
     <link rel="stylesheet" href="./css/style.min.css?v=2" />
     <link rel="stylesheet" href="./css/webkit.min.css" />
@@ -14,15 +24,14 @@
 </head>
 <body>
   <div class="a-logo"><img src="./images/c32.png"></div>
-    <h1 class="tac editor-h1">Editor</h1>
+    <div id="header-title" class="tac editor-h1">Editor</div>
     <div class="editor-menu">
-    <span class="home-a" id="home-a"><a href="Editor.html" class="a-button">Editor</a></span>
+    <span class="home-a blobber-button active-button" id="home-a">Editor</span>
+    <span class="blobber-button" id="files-button">Files</span> 
     <span class="blobber-button" id="blobber-button">Blobber</span>
 
     </div>
     <div id="container-editor" class="show">
-    <p class="tac">Select inputted text to reveal toolbar</p>
-    <div class="pgeneral"></div>
 
     <span class="sample-button" id="toggle">
       <span class="tooltip">Wrap</span>
@@ -30,7 +39,7 @@
     <img id="unwrapped" class="hide" src="./images/unformatted.svg" />
   </span> 
     <span class="sample-button" id="small-reload-button"><span id="relode"><img src="./images/reload.svg" /></span>
-    <span class="tooltip">Refresh</span></span>
+    <span class="tooltip">New</span></span>
 
     <span class="sample-button" id="sample-button"><img src="./images/example.svg" />
       <span class="tooltip">Example</span>
@@ -70,9 +79,10 @@
     <button id="hr-button">HR</button>
   </div>
   <div class="editor-col2" id="htmlOutput" readonly></div>
- 
+ </div>
 </div>
 
+<div id="container-files" class="hide">
 <div class="flexy">
     <div class="editor-col1" id="control">
         <input id="editor-password" name="i5" minlength="10" type="password" autocomplete="current-password" placeholder="Enter password" />
@@ -101,48 +111,50 @@
         <div class="bigbutton background-color-two font-color-one" id="save-encrypted-to-text-file">SAVE ENCRYPTED FILE AS</div>
         <br />
         <span id="message"></span>
+        <div id="cloud-container" class="hide fileviewcontainers">
+          <div class="highlighted">Cloudinary parameters</div>
+        <div class="flexy">
+        <div class="heado">
+        <label for="cloud-1-input">Cloud name</label>  
+        </div>
+        <div id="cloud-1" class="inputo">
+          <input id="cloud-1-input" name="cloud-1-input" minlength="5" type="text" placeholder="" />
+        </div>  
+        </div>
+        <div class="flexy">
+        <div class="heado">
+        <label for="cloud-2-input">Cloud Folder</label>  
+        </div>
+        <div id="cloud-2" class="inputo">
+          <input id="cloud-2-input" name="cloud-2-input" minlength="5" type="text" placeholder="" />
+        </div> 
+        </div>
+        <div class="flexy"> 
+          <div class="heado">
+        <label for="cloud-3-input">Cloud Preset</label>  
+        </div>
+        <div id="cloud-3" class="inputo">
+          <input id="cloud-3-input" name="cloud-3-input" minlength="5" type="text" placeholder="" />
+        </div>  
+        </div>          
+        </div>
       </div>   
     <div class="editor-col2" id="encryptedText">
     </div>
-    </div>
-    <div id="cloud-container" class="hide fileviewcontainers">
-      <h3>Cloud parameters</h3>
-    <div class="flexy">
-    <div class="heado">
-    <label for="cloud-1-input">Cloud name</label>  
-    </div>
-    <div id="cloud-1" class="inputo">
-      <input id="cloud-1-input" name="cloud-1-input" minlength="5" type="text" placeholder="" />
-    </div>  
-    </div>
-    <div class="flexy">
-    <div class="heado">
-    <label for="cloud-2-input">Cloud Folder</label>  
-    </div>
-    <div id="cloud-2" class="inputo">
-      <input id="cloud-2-input" name="cloud-2-input" minlength="5" type="text" placeholder="" />
-    </div> 
-    </div>
-    <div class="flexy"> 
-      <div class="heado">
-    <label for="cloud-3-input">Cloud Preset</label>  
-    </div>
-    <div id="cloud-3" class="inputo">
-      <input id="cloud-3-input" name="cloud-3-input" minlength="5" type="text" placeholder="" />
-    </div>  
-    </div>          
-    </div>
-<div id="output" class="fileviewcontainers"></div>
+</div>
+<div id="output" class="fileviewcontainers">Files</div>
 
-<div id="cloud-list" class="fileviewcontainers"></div>
+<div id="cloud-list" class="fileviewcontainers">Clouds</div>
 
 <div class="fileview"><pre id="fileContents" contenteditable="true"></pre></div>
 <input type="hidden" id="hiddenFileContents" />    
+
+
 </div>
 
 <div id="container-blobber" class="hide tac">
 <h2>Upload images and get the blob.</h2>
-  <div id="the-drop-area" class="drop-area flexy hide">
+  <div id="the-drop-area" class="drop-area flexy">
     <input type="file" id="file-input" />
     <p>Drag and drop file here or click to select file</p>
   </div> 
@@ -162,7 +174,9 @@
 </div>
 </div>
   </body>
-    <script src="./js/editor.min.js?v=2"></script>
-    <script src="./js/blobber.min.js?v=2"></script>
+  <script preload src="./js/HTMLconversion.min.js?v=7"></script>
+    <script src="./js/editor.min.js?v=7"></script>
+    <script src="./js/blobber.min.js?v=7"></script>
+    <script src="./js/highlight.min.js?v=7"></script>
 </body>
 </html>

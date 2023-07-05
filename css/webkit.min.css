@@ -1,0 +1,2 @@
+/* minify not used here */
+body, html {::-webkit-scrollbar {display: none;}}html{-webkit-tap-highlight-color: transparent;}

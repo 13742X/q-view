@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -13,6 +14,8 @@
     <link id="display" rel="stylesheet" href="" />
     <link id="theme" rel="stylesheet" href="" />
     <link id="stylesheet" rel="stylesheet" href="./css/dark-mode.min.css" disabled aria-disabled="" />
+    <!-- used by highlight.js-->
+    <link rel="stylesheet" href="./css/highlightjs-codepen.min.css">
         <!-- pwa -->
     <link id="pwa-manifest" rel="manifest" href="./pwa/pwa.manifest" />
     <script id="pwa-sw" src="./pwa/sw.js"></script>
@@ -74,23 +77,27 @@
       <f id=""><img class="icon-svg" src="./images/speaker.svg" /></f>
       <div class="icon-text icon-text-color">speak</div>
     </div>    -->
-    <div id="the-options" class="settings-only refresh tac">
+    <div id="print-button" class="settings-only refresh tac icon-hide">
+      <img class="icon-svg" src="./images/print.svg" />
+      <div class="icon-text icon-text-color">print</div>
+    </div>  
+    <div id="the-options" class="settings-only refresh tac icon-hide">
       <a href="options.html" target="_blank"><img class="icon-svg" src="./images/options.svg" /></a>
       <div class="icon-text icon-text-color">options</div>
     </div>      
-    <div  id="the-sandbox" class="settings-only refresh tac">
+    <div  id="the-sandbox" class="settings-only refresh tac icon-hide">
       <a target="_blank" href="editor.html"><img class="icon-svg" src="./images/sandbox.svg" /></a>
       <div class="icon-text icon-text-color">editor</div>
     </div>
-    <div id="help" class="help tac">
+    <div id="help-button" class="settings-only help tac icon-hide">
       <a id ="helpy"><img class="icon-svg" src="./images/help.svg" /></a>
       <div class="icon-text icon-text-color">help</div>
     </div>
-    <div id="expand" class="expand tac">
+    <div id="expand" class="expand tac hide">
       <a id ="expando" target="blank" href="index.html"><img class="icon-svg" src="./images/expand.svg" /></a>
       <div class="icon-text icon-text-color">expand</div>
     </div>
-    <div id="refresher" class="settings-only refresh tac">
+    <div id="refresher" class="settings-only refresh tac icon-hide">
       <a id ="reload"><img class="icon-svg" src="./images/document.svg" /></a>
       <div class="icon-text icon-text-color">view</div>
     </div>
@@ -174,7 +181,7 @@
   </div>
 </div>
 <h2>This</h2>
-<a class="general-href" href="?JTNGYSUzREV4YW1wbGVzJTI2YiUzRGh0dHBzJTNBJTJGJTJGcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSUyRjEzNzQyWCUyRnZpZXctcS1leGFtcGxlcyUyRm1haW4lMkZleGFtcGxlcy5tZCUyNmMlM0RodHRwcyUzQSUyRiUyRnJhdy5naXRodWJ1c2VyY29udGVudC5jb20lMkYxMzc0MlglMkZ2aWV3LXEtZXhhbXBsZXMlMkZtYWluJTJGZXhhbXBsZXMuY3N2JTI2ZCUzRGRlZmF1bHQtbG9nby5zdmc=" >examples</a>
+<a class="general-href" href="?JTNGYSUzREV4YW1wZXMlMjBOZXclMjZiJTNEaHR0cHMlM0ElMkYlMkZyYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tJTJGMTM3NDJYJTJGdmlldy1xLWV4YW1wbGVzJTJGbWFpbiUyRmV4YW1wbGVzLW5ldy5tZCUyNmMlM0RlbWJlZGRlZCUyNmQlM0RkZWZhdWx0LWxvZ28uc3Zn" >examples</a>
             <div class="flexy h50">
               <div class="heado">Markdown File<span id="encrypted-file"></span></div>
               <div class="inputo">
@@ -302,23 +309,41 @@
               <div class="butto">
                 <div class="mybutton background-color-two font-color-one" id="createURL">+URL</div>
               </div>
-                <span class="hide copy-mess font-color-two font-color-one" id="copy-message">Copied!</span>
-              <div>
-                <span class="copy-mess font-color-two" id="the-url-message"></span>
-              </div>
-            </div>            
+            
+            </div>  
+            <div class="flexy h50">  
+            <div class="heado">URL Expiry</div>
+            <div class="radio-container"> 
+              <label class="radio-label">
+                <input type="radio" name="expiry" checked value="5"> 5 minutes
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="expiry" value="60"> 1 hour
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="expiry" value="1440"> 24 hours
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="expiry" value="x"> No expiry
+              </label>
+            </div>    
+            </div>    
             <div class="flexy h50">
               <div class="copy-button-heado"></div>
               <div class="butto">
-                <div class="mybutton background-color-two font-color-one" id="copyButton"><img src="./images/copy.svg"/> PK</div>
+                <div class="copybutton background-color-two font-color-one" id="copyButton"><img src="./images/copy.svg"/> PK</div>
               </div>
               <br/>
               <div class="butto">
-                <div class="mybutton background-color-two font-color-one" id="copyFullButton"><img src="./images/copy.svg"/> HTTP</div>
+                <div class="copybutton background-color-two font-color-one" id="copyFullButton"><img src="./images/copy.svg"/> HTTP</div>
               </div>
               <br/>
               <div class="butto">
-                <div class="mybutton background-color-two font-color-one" id="copyURLButton"><img src="./images/copy.svg"/> URL</div>
+                <div class="copybutton background-color-two font-color-one" id="copyURLButton"><img src="./images/copy.svg"/> URL</div>
+              </div>
+              <span class="hide copy-mess font-color-two font-color-one" id="copy-message">Copied!</span>
+              <div>
+                <span class="copy-mess font-color-two" id="the-url-message"></span>
               </div>
             </div>                 
 <!-- <h2>Local Files</h2>   
@@ -420,6 +445,7 @@
           </div>
           </div>
           <div class="kpi-mess font-color-three" id="statistics"></div>
+          <div class="the-flyer" id="flyer"></div>
           <div class="cl2 pleft" id="niv-text"></div>
       </div>  
       <div class="item4">
@@ -429,22 +455,28 @@
   </div>
 </div>
   
+
+
+
    <script id="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/13.0.1/markdown-it.min.js" src="./js/markdown-it.min.js"></script>
    <script id="qviewer" src="./js/markdown-it-plus.min.js"></script>
+
+
+
   <!-- concat for production -->
   <!-- <script src="./js/_code.js"></script> -->
   
    <!-- rem for production -->
-
+   <script preload src="./js/HTMLconversion.min.js"></script>
     <script preload src="./js/0-url.min.js"></script>
     <script preload src="./js/1-files.min.js"></script>
     <script defer src="./js/2-active.min.js"></script>
     <!-- <script defer src="./jsdev/3-cloudlist.min.js"></script>  -->
-    <script defer src="./js/4-markdown.min.js"></script>
     <!-- <script defer src="./jsdev/6-database.min.js"></script> -->
     <script defer src="./js/7-crypt.min.js"></script>
     <script defer src="./js/8-google.min.js"></script>
     <script defer src="./js/9-internet.min.js"></script>
     <!-- <script defer src="./jsdev/10-cloudinary.min.js"></script> -->
+    <script src="./js/highlight.min.js?v=5"></script>
   </body>
 </html>

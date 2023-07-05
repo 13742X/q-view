@@ -17,8 +17,14 @@ Latest (June 2023)
 * on tag creation, copy public key or copy full https://
 * url shortener - uses server so security considerations required
 * CSP control over rogue iframe activities
-* Mardown-it 13.0.1 does not parse SVGs so hack code to do this as base64 (see https://youtrack.jetbrains.com/issue/JT-70691)
+* Markdown-it 13.0.1 does not parse SVGs so hack code to do this as base64 (see https://youtrack.jetbrains.com/issue/JT-70691)
+* Markdown-it-plus removes plugin dependency - sub, sup, mark, typography, emojis
+* use of common highlights.js for code formatting
 * options.html dislays the version of the markdown-it used
+* print button (ideally for pdf printing) in Settings
+* hide certain divs on page load to stop flashing
+* help button moved to Settings to avoid clutter
+* on creating url shortener, set expiry time. Default is 5 minutes
 
 **0.0.2.4:**
 * markdown allows for embedded videos including iframe YouTube

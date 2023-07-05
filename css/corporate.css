@@ -1,0 +1,48 @@
+body,html{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:16px;
+    color:darkslategray;
+    -webkit-font-smoothing: antialiased;
+}
+h1 {color:darkblue;}
+h2 {color: black}
+  a, a:hover{
+    color:darkslategray;
+    text-decoration: none;
+  }
+  a:visited{
+    text-decoration: none;
+  }
+  ul {
+    list-style-type: "→";
+  }
+  li{
+    padding:5px;
+  }
+  pre {
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    background-color: gainsboro;
+    padding: 5px;
+   }
+   blockquote {
+    background: #f9f9f9;
+    border-left: 10px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    /* quotes: "\201C""\201D""\2018""\2019"; */
+  }
+  blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+  blockquote p {
+    display: inline;
+  }  

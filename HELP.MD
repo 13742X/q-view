@@ -1,27 +1,17 @@
-m1,Welcome,orphan
-m8,Getting started,parent
-m10,Overview,child
-m11,Journey,child
-m12,Extension,child
-m13,Navigation,child
-m14,Settings,child
-m7,Basics,orphan
-x,How it works,parent
-m2,Markdown,child
-m5,Syntax,child
-m3,Grouping,child
-m4,Files,orphan
-m6,Settings,orphan
-m15,Examples,orphan
-{{{m1}}}
-[[
-# HELP
+{{Welcome}}
+# Q-VIEWER 3
 
-## Overview
+## What this is
 
 This is a simple text viewer with 
 * a menu on the left and 
 * content on the right.
+
+[See Examples](?JTNGYSUzREV4YW1wZXMlMjBOZXclMjZiJTNEaHR0cHMlM0ElMkYlMkZyYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tJTJGMTM3NDJYJTJGdmlldy1xLWV4YW1wbGVzJTJGbWFpbiUyRmV4YW1wbGVzLW5ldy5tZCUyNmMlM0RlbWJlZGRlZCUyNmQlM0RkZWZhdWx0LWxvZ28uc3Zn)
+
+{{Uses}}
+
+## Use Cases
 
 It is useful for 
 * Documentation
@@ -35,7 +25,7 @@ It is useful for
 
 No user logon is required.
 
-Only one plain text files is needed for the viewer.
+Only one plain text file is needed for the viewer.
 
 The plain text file can be managed in the app using Markdown notation.
 
@@ -43,29 +33,31 @@ Files can be encrypred using browser cryptography in the app for added security.
 
 Public keys can be generated for other people to import and share.
 
+Short URLs can be generated for other people to view.
+
 Files can be stored locally or on servers (such as GitHub or Cloudinary).
 
-Store short cut links.
+In the app, store short cut links.
 
 Apply custom stylesheets.
 
 Reset and delete everything back to default.
 
-Embed static media like this:
+Enhanced funationality allows for embedding of various static media like this:
 
-![Help](https://res.cloudinary.com/vantacloud/image/upload/v1685222836/smm-summary.png)
+![Help](https://res.cloudinary.com/vantacloud/image/upload/v1688462766/qv-screenshot.png)
 
 !!![https://www.youtube.com/embed/ijqqJHHi4Lg][600,600]
 
-Embed dynamic media such as movies using iframe:
+Embed dynamic media such as movies
 
 !![moview.mp4][video/mp4][320,240]
 
-Use same markdown for PDFs
+... or PDFs
 
 !!![example.pdf][1000,1000]
 
-...and google sheets
+...or Google sheets
 
 !!![https://docs.google.com/spreadsheets/d/e/2PACX-1vSw0jd9cRZ0vtc_F9utMXxSWtGguTn3_qu6JjWkJ_Z5UN-NOqTXU1GVCG_IKZPMD6Hi7tO4MNLT5MDp/pubhtml?widget=true&amp;headers=false][600,600]
 
@@ -88,47 +80,48 @@ Here is a Google Slide show:
 
 !!![https://player.twitch.tv/?autoplay=false&channel=ninja&parent=app.q-viewer.com][100,100]
 
-Here is a map:
+...and here is a map:
 
 !!![https://www.openstreetmap.org/export/embed.html?bbox=-73.98564577102663%2C40.72021732170311%2C-73.9707112312317%2C40.73212067043136&amp;layer=mapnik][600,600]
 
 
-ChatGPT (when it wants too!)
+...and ChatGPT (when it wants too!)
 
 !!![https://chat.openai.com/share/9116e560-16e1-4801-9dfc-39f4755afc58][600,600]
 
-]]
-{{m2}}
-[[
-# Markdown
+...plus any other CORs friendly embedded iframes.
+{{Getting started,parent}}
+
+{{Markdown}}
+
+## Markdown
 
 Markdown is a way to format simple text files that can be converted into HTML for viewing purposes. Any text editor can be used and no coding is required. 
 
-Alternatively, especially if the files and / or media need to be encrypted or embedded directly, the in app editor should be used. 
+Plain text can be read easily so if the content is sensitive, you can encrypt the file using the in app editor. Images can be embedded as encrypted text, again using the Blobber in the editor, instead of linking to a third party website. 
 
 Markdown is a lightweight markup language that is widely used for formatting text documents. It is useful and productive because it allows users to create well-formatted documents without the need for complex formatting codes or tools. Markdown syntax is simple and easy to learn, which saves time and increases productivity. It can be used for a wide range of purposes, including writing articles, notes, documentation, and creating web pages. Additionally, markdown documents can be easily converted to various formats, such as HTML or PDF, making it a versatile resource for content creation and sharing.
 
-These words are written and saved in a plain text file called help.md. 
+These words, for example, are written and saved in a plain text file called help.md. 
 
-The extension, MD stands for Markdown, but the file is just a plain text file. It can be written or read in any app that can process plain text files such as Notepad, Atom or TextEdit.
+The extension, MD stands for Markdown, but the file is just a plain text file. Some editors may apply an MD format but have found for ease of use, saving the files as .txt suffices. Files can be written or read in any app that can process plain text files such as Visual Code, Notepad++, Atom or TextEdit.
 
-Markdown is popular because it can be written without knowing much, or anything, about HTML, CSS or Javascript
+Markdown is popular because it can be written without knowing much, or anything, about HTML, CSS or Javascript. It is used by many popular services.
  
-Certain words or phrases can be tagged, so that it can be regenerated into an html page.
+Instead of typing in HTML, certain words or phrases can be tagged, so that it can be regenerated into an html page by the app.
 
-Q-Viewer has extended the common markdown syntax with the added functionality of grouping text and indexing it with a menu. This provides a useful utility for Frequently Asked Questions, help, policy and procedures, operating manuals, books with chapters and so on.
+Q-Viewer has extended the common markdown syntax (we use markdown-it and our own plugin markdown-it-plus) with the added functionality of grouping text and indexing it with a menu. This provides a useful utility for Frequently Asked Questions, help, policy and procedures, operating manuals, books with chapters and so on.
 
-However, the Files must on a server (with a url) or within the /files folder of this extension. Some files may be sensitive so the app allows files encrypted with a password to be viewed. When the files are viewed, the password is input (and stored locally if required).
+It should be noted the Files must on a server (with a url) or within the /files folder of this extension (useful if you want to run the app offline and developer mode as an extension). Some files may be sensitive so the app allows files encrypted with a password to be viewed. When the files are viewed, the password is input (and stored locally if required).
 
 The app can be run as standalone on a device.
 
 Links, or permalinks, can be created to view files in the app or externally.
 
-]]
-{{m5}}
-[[
-## Syntax
 
+{{Syntax}}
+
+## Syntax
 
 There are a number of flavors, but we use the CommonMark specification as it is a widely used syntax standard for the Markdown markup language. 
 
@@ -136,7 +129,7 @@ The CommonMark specification, which defines the syntax for Markdown, was develop
 
 We have enhanced its capabilities and include embedding of videos.
 
-# Summary
+## Summary
 Here's a summary of the key syntax elements in the CommonMark specification:
 
 Headers: Use hash symbols (#) at the beginning of a line to create headers. The number of hash symbols determines the header level.
@@ -173,77 +166,56 @@ The [600,600] represent the height and width.
 
 !!![https://chat.openai.com/share/9116e560-16e1-4801-9dfc-39f4755afc58][600,600]
 
-]]
-
-{{m3}}
-[[
+{{Grouping}}
     
-# How to create a group
+## How to create a group
 
 Grouping text together and giving them an index id. 
 
 In the text file, wrap groups like this:
 { { menu id } }
-[ [ lots of text ] ]
-
-If the first group needs to appear as the first menu item, then 
-{ { { menu id } } }
-[ [ lots of text ] ]
-
-]]
-
-{{m4}}
-[[
-# Working with files
+lots of text
 
 
-1 file is required. 
+{{Files}}
 
-In the header we insert a menu file (See below)
+## Working with files
+
+
+1. file is required. 
 
 2. a markdown text file
 
 If the markdown is sensitive, it should be edited in Settings and 
+
 * the encrypted check box checked 
 * a password entered
 
-before saving the markdown file (menus cannot at present be encrypted). The file will be encrypted and encoded into base64. Unless the password is known and the cryptographic algorithm used, the file will be useless to a bad actor.
+before saving the markdown file it will be encrypted and encoded into base64. Unless the password is known and the cryptographic algorithm used, the file will be useless to a bad actor.
 
 Note the password needs to present in Settings at all times. If the browser cache is hard deleted, this should be deleted too.
 
 ## menu syntax
+To create a menu then above a group of text
 
+{ { menu item } }
 
-This is a csv (comma sepeareted values) file with 3 parts [index],[title],[type].
-No header is required although can be put in.
+If you want the items below to be children (sub headers) then
 
-**Example**
+{ { menu item,parent } }
 
-    
-    menu id,title,type // header
-    menu1,Welcome,orphan 
-    menu2,How it works,parent 
-    menu3,Starting,child 
-    menu4,Finishing,child 
-    menu5,Closing thoughts,orphan
+The HTML output is { { a,b,c } } where a is a unique ID, b is the menu Description and c is the menu type (orphan, parent or child). By default if there is no c, it is treated as a stand alone menu (orphan).
 
-The [index] is used to open the group of text in the markdown file.
-
-The title is the title of the menu option.
-
-The type is orphan ; parent ; child.
-
-This is saved at the top of the markdown file before the first '{'.
 
 # local files
 
 Chrome extension folders can be found by typing in chrome://version into the browser. Depending on permissions and operating system, there is an empty folder call files which can be used for markdown and csv files and accessed via Settings. However this requires a bit of effort. Files are also stored in the browsers internal database.
 
-]]
-{{m6}}
-[[
 
-# Settings
+{{Settings}}
+
+
+## Settings
 
 
 Settings have the following functions:
@@ -255,9 +227,6 @@ Settings have the following functions:
 * Api key for server access (stored but not used)
 * View history of shortcut links
 * Click on shortcuts to view markdowns
-* Create a new name for a markdown and save to history
-* Delete shortcuts
-* Edit a local file and Save As
 
 The default files are these help files. 
 
@@ -279,8 +248,9 @@ Example is https://raw.githubusercontent.com/13742X/view-q-examples/main/niv.md
 
 Note these files are served as Content-Type => text/plain. Fetching directly from GitHub the files served are often HTML and view-q will not read these properly, so use the 'raw' versions.
 
-]]
-{{m7}}[[
+
+{{Basics, orphan}}
+
 ## Basics
 
 Navigation is via the left hand menu. Each menu option views a group of paragraphs and chapters in the main body of text, the markdown file. 
@@ -303,43 +273,25 @@ The settings screen has a number of options.
 11. Can encrypt the text based file (using password in 2 above)
 12. Use the editor for 10 and 11 above
 
-]]
-{{m10}}[[
-# Getting started
+
+{{Getting Started}}
+
+## Getting started
 
 1. Use a text editor and create a body of text in markdown format.
-2. Add the menu to the top of the file before the first curly bracket.
-3. Decide where to store (Github is easiest) and save.
-4. Add the file locations in the Settings.
-5. Click reload to ensure files can be viewed.
-6. In Settings add a tag name and create a package.
-7. Copy the public key and save for future use or to send to someone else.
-8. Reload and view the package in the Links dropdown.
+2. Decide where to store (Github is easiest) and save.
+3. Add the file locations in the Settings.
+4. Click reload to ensure files can be viewed.
+5. In Settings add a tag name and create a package.
+6. Copy the public key and save for future use or to send to someone else.
+7. Reload and view the package in the Links dropdown.
 
 It is very difficult to configure the extension to allow local files to be accessed. Although files can be edited and saved, they cannot be served locally. This is a "security" feature and although there are workarounds like running your own local webserver or running other extensions, this version requires the files to be stored online. In doing so it is best to encrypt them.
 
 The way it can be achieved is for the files to be stored locally in the browser. The downside is that they cannot easily be shared but if you are the only person reading them, then it is a solution. 
-]]
-{{m11}}[[
-# Journey
 
-High level
+{{Download}}
 
-* click on help icon and view help
-* import a public key and view
-* highlight text by clicking on it
-* import a public key and private key to decrypt and view
-* manually add file locations and reload to view
-* create a link tag based off the manually added file locations
-* view and select the links in the icon bar
-* copy a generated public key based on the link tag (for importing)
-* open an existing file, encrypt with a private key / password and save in a file location
-* upload a file to a cloud
-* store list of original file, tags and cloud links
-* save a file automatically into local storage and view
-
-]]
-{{m12}}[[
 ## Download the extension
 
 * Enable it be seen in the toolbar
@@ -352,8 +304,9 @@ High level
     * Click on the menu items and the relevant section in the main file is shown
 * Click on expand into a tab (desktop)
     * This opens up file editing features in Settings
-]]
-{{m13}}[[
+
+{{Navigation}}
+
 ## Navigation
 
 * Toolbar functions
@@ -363,12 +316,13 @@ High level
     * View. This reloads the app and removes any parameters in the URL.
     * Expand. Expands the extension into a tab for easier use.
     * Settings
-        * Clicking this toggles the menu from visible to hidden. It also shows the Options and Sandbox icons.
+        * Clicking this toggles the menu from visible to hidden.
 
 * Menus and main text
-    * These two files (called a package) are served by what is recorded in Settings. By default it is the Help. Further packages can be viewed if the url links have been recorded.
-]]
-{{m14}}[[
+    * The file and its attributes such as Title or Logo (called a package) are served by what is recorded in Settings. By default it is the Help. Further packages can be viewed if the url links have been recorded.
+
+{{Settings}}
+
 ## Settings
 
 * Importing a public key
@@ -377,8 +331,8 @@ High level
     * Private key - used to unecrypt an imported public key. 
     * API key - currently not used but will provide an secondary security control.
 * This
-    * The main file aisre recorded here. If the links have been clicked, it will populate these text boxes. These textboxes can be entered with new url links. Click reload and the menu and main text should be viewable. If the messages say "files not loaded" then the text area text will highlight red to show the file could not be found or loaded properly. If a valid load occurs, this not be flagged in red.
-    * Style sheet - there are 2 default style sheets although a style sheet url can be entered to override.
+    * The main file is recorded here. If the links have been clicked, it will populate these text boxes. These textboxes can be entered with new url links. Click reload and the menu and main text should be viewable. If the messages say "files not loaded" then the text area text will highlight red to show the file could not be found or loaded properly. If a valid load occurs, this not be flagged in red.
+    * Style sheet - there are a number of default style sheets although a style sheet url can be entered to override.
     * Logo - a logo associated with the package can be entered here. It will be a link to an image.
     * Tag - if the package has been imported then the name of the package will be here. It is used by the links dropdown.
 * Packages
@@ -389,11 +343,6 @@ High level
 * Limitation of tag characters
 * Deleting tags
 * Viewing tags in the dropdown called Links
+* Creation of a short URL (be aware that this is stored on SystemM.co, the provider of Q-Viewer)
 
-]]
-{{m15}}[[
 
-Want to view some use cases?
-
-[See Examples](?JTNGYSUzREV4YW1wbGVzJTI2YiUzRGh0dHBzJTNBJTJGJTJGcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSUyRjEzNzQyWCUyRnZpZXctcS1leGFtcGxlcyUyRm1haW4lMkZleGFtcGxlcy5tZCUyNmMlM0RodHRwcyUzQSUyRiUyRnJhdy5naXRodWJ1c2VyY29udGVudC5jb20lMkYxMzc0MlglMkZ2aWV3LXEtZXhhbXBsZXMlMkZtYWluJTJGZXhhbXBsZXMuY3N2JTI2ZCUzRGRlZmF1bHQtbG9nby5zdmc=)
-]]
