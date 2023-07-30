@@ -1,0 +1,255 @@
+{{Basic Markdown!}}
+
+Crib sheet for markdown syntax.  
+Apply custom style sheets where required.
+This is based on CommonMark with q-viewer+ enhancements.
+
+# ==HEADERS==
+
+# h1 Heading :dog:
+## h2 Heading 
+### h3 Heading 
+#### h4 Heading
+##### h5 Heading
+###### h6 Heading
+
+# ==LINE BREAKS==
+
+I have **two spaces** after the full stop / period and this creates a line break.  
+Told you!
+
+A \ at the end creates a break too.\
+Told you!
+
+By default markdown restricts the text to have only 1 line break. Use the \ before the next sentence to force line breaks.
+
+\
+\
+\
+\
+\
+\
+\
+This is the next sentence.  
+
+# ==TEXT POSITIONING==
+
+By default I stay left
+
+~I am centered
+
+¡I am on the right
+
+[Note: The inverted ! is OPTION ! on a Mac and ALT 173 on Windows] 
+
+# ==HORIZONTAL LINES==
+
+___
+
+---
+
+***
+
+
+# ==REPLACEMENTS==
+
+(c) (C) (r) (R) (tm) (TM) +-
+
+!!!!!! ???? ,, 
+
+squared^2^
+
+H~2~0
+
+
+# ==EMPHASIS==
+
+
+**This is bold text**
+
+__This is bold text__
+
+*This is italic text*
+
+_This is italic text_
+
+==This is a highlight==
+
+~~Strikethrough~~
+
+# ==USING THE MARKDOWN CHARACTERS==
+
+Use \ to "escape" the character which means it doesn't apply the markdown.
+
+WhatsApp uses \*text\* for bold and not italics.
+
+# ==BLOCK QUOTES==
+
+> Blockquotes can also be nested...
+>> ...by using additional greater-than signs right next to each other...
+> > > ...or with spaces between arrows.
+
+
+# ==LISTS==
+
+Unordered list
+
++ Create a list by starting a line with `+`, `-`, or `*`
++ Sub-lists are made by indenting 2 spaces:
+  - Marker character change forces new list start:
+    * Ac tristique libero volutpat at
+    + Facilisis in pretium nisl aliquet
+    - Nulla volutpat aliquam velit
++ Very easy!
+
+Ordered list
+
+1. Lorem ipsum dolor sit amet
+2. Consectetur adipiscing elit
+3. Integer molestie lorem at massa
+
+
+1. You can use sequential numbers...
+1. ...or keep all the numbers as `1.`
+
+Start numbering with offset:
+
+57. foo
+1. bar
+
+# ==DYNAMIC DIVS==
+
+To wrap text inside an HTML div you can apply a style class to it as well.
+
+::: tac
+This is text in a \<div\> container with class=tac
+:::
+
+==MATH SYMBOLS (use html equivalents)==
+
+Summation:
+
+&#8721; &#x2211; &sum;
+
+# ==EMOJIS==
+
+Examples:
+
+:rock:
+:fish:
+:australia:
+:honeybee:
+:juggling_person:
+
+[Full List (text file)](emojis.txt);
+
+# ==COMPUTER CODE==
+
+Inline `code`
+
+Indented code
+
+    // Some comments
+    line 1 of code
+    line 2 of code
+    line 3 of code
+
+
+Block code "fences"
+
+```
+Sample text here...
+```
+
+Syntax highlighting
+
+``` js
+var foo = function (bar) {
+  return bar++;
+};
+
+console.log(foo(5));
+```
+
+# ==TABLES==
+
+| Option | Description |
+| ------ | ----------- |
+| data   | path to data files to supply the data that will be passed into templates. |
+| engine | engine to be used for processing templates. Handlebars is the default. |
+| ext    | extension to be used for dest files. |
+
+Right aligned columns
+
+| Option | Description |
+| ------:| -----------:|
+| data   | path to data files to supply the data that will be passed into templates. |
+| engine | engine to be used for processing templates. Handlebars is the default. |
+| ext    | extension to be used for dest files. |
+
+Center aligned columns
+
+| Option | Description |
+| :------:| :-----------:|
+| data   | path to data files to supply the data that will be passed into templates. |
+| engine | engine to be used for processing templates. Handlebars is the default. |
+| ext    | extension to be used for dest files. |
+
+# ==LEGAL DOCUMENTS==
+
+Numbering and indenting numbering is not possible with markdown so we have implemented a way to do this.
+
+~Big Inc ("Party 1")
+
+~Smaller Inc ("Party 2")
+
+**Agreement** is between Party 1 and Party 2 to do something for value. There are various clauses and to number them with sub numbering wrap them like this using the + sign abutting the text:
+
+%%%%
++clause one
+++clause one.one
+++clause one.two
++++clause ono.two.one
++++clause ono.two.two
++clause two
++clause three
+%%%%
+The agreement ends here.
+# ==SCREENPLAY==
+
+Enter 4 $ next to each other at top of page to tell markdown this has special characters to markdown specific required formats. If you add this to the end of file, you can use the screenplay markdown for other purposes such as legal document formats.
+
+| Event | Code |
+|----|----|
+| Character |  ![Title](./images/tilde.svg )
+| Transition |  ![Title](./images/inverted.svg )
+| Parenthetical |  ![Title](./images/section.svg )
+| Dialogue |  ![Title](./images/grave.svg )
+
+Example:
+Note how the character name is centered on the page automatically and the font is monospaced.
+
+$$$$
+
+~**HOLLYWOOD DUST**
+
+¡FADE IN:
+**EXT BUS STOP - NIGHT (1:00 AM)** 
+
+A dimly lit bus stop stands at the deserted intersection, rain pouring down in sheets, creating a melancholic ambiance. A man, mid-30s, wearing a soaked coat and holding an ==umbrella?==, impatiently paces back and forth, glancing at his watch with frustration. This is **JOHN.** He is talking to an imaginery person, **JOHN'S FRIEND**.
+
+JOHN
+§(voice lowered, shivering)  
+`Damn, where is that bus?
+
+JOHN'S FRIEND
+§(smirking)  
+`You know, John, they say life is like waiting for a bus. You wait and wait, but you never know when it's going to arrive.
+
+JOHN
+§(rolls his eyes)  
+`This isn't the time for your philosophical musings, alright?
+
+
+The rain intensifies, and John's frustration grows more palpable.
+
