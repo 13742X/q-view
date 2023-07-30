@@ -11,11 +11,11 @@ Opens and parses a markdown file. This enables a 2 column "help" app to be deliv
 
 # Functionality
 
-Read the HELP.MD.  
+Read the HELP.MD in the app.  
 
 # Markdown
 
-There are a number of standards and commonly used protocols. This uses CommonMark. There are a number of limitations (e.g support for iframes or grouping) and bugs (e.g SVG files not parsed properly) so we have created a *-plus.js enhancement..
+There are a number of standards and commonly used protocols. This uses CommonMark and the markdown-it js library. There are a number of limitations (e.g support for iframes or grouping, legal numbering, text alignment, media embedding) and bugs (e.g SVG files not parsed properly) so we have created a *-plus.js enhancement.
 
 HTML in Markdown documents will pass as is, unless enclosed into inline or multiline preformatted blocks, in which case it will be escaped appropriately.
 
@@ -29,7 +29,7 @@ On Windows devices the mime type .md text/plain may have to be added to IIS, oth
 
 # CORS
 
-Many cloud services or data stores have implemented CORS policies which means files cannot be fetched without error, for example Google drive, unless api's are created and monitored. Cloudinary, Dropbox, Goolgle workspace and most CDNs are CORS free. The other alternative is to use jsdelivr which serves files from GitHub CORS free.
+Many cloud services or data stores have implemented CORS policies which means files cannot be fetched without error, for example Google drive, unless api's are created and monitored. Cloudinary, Github, Dropbox, Google workspace and most CDNs are CORS free. A full list is on the q-viewer.com website. The other alternative is to use jsdelivr which serves files from GitHub CORS free.
 
 # Deployment
 
